@@ -1,2 +1,3 @@
 tp/tp*/*/build
 tests/test*/*/*/build
+*.zip
