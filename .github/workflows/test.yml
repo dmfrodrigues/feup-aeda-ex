@@ -161,4 +161,4 @@ jobs:
         mkdir build && cd build
         cmake .. && make
     - name: test
-      run: cd tests/test1/2018/aeda1819_ci1_googleTest && ./aeda1819_ci1
+      run: cd tests/test1/2018/aeda1819_ci1_googleTest/build && ./aeda1819_ci1
