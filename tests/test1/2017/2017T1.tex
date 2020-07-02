@@ -1,0 +1,27 @@
+\setcounter{chapter}{16}
+\exam{Teste 1 2017}
+\begin{center}
+\begin{tabular}{r | l}
+	Pergunta & Resposta \\ \hline
+	1 & B \\
+	2 & E \\
+	3 & A \\
+	4 & C \\
+	5 & C \\
+	6 & D \\
+	7 & A
+\end{tabular}
+\end{center}
+\question{Pergunta 8}
+Uma classe abstrata é uma classe em que pelo menos um dos membros-função é uma função virtual pura (em que uma função virtual pura é uma função declarada como virtual mas não implementada). Isto significa que uma classe abstrata não pode ser instanciada, e que as classes derivadas dessa classe têm que (1) ser também abstratas, ou (2) implementar todas as funções virtuais puras.\\
+As classes abstratas possuem várias utilidades, entre as quais:
+\begin{itemize}
+	\item Servir como interface entre outra classe ou programa e uma classe que o programador implemente, em que, para servir de forma eficaz como interface, o autor da classe abstrata espera que o programador implemente determinadas funções quando derivar da classe abstrata. 
+\end{itemize}
+\question{Pergunta 9}
+\begin{enumerate}
+	\item Passando um argumento por valor, é efetuada uma cópia do parâmetro fornecido, estando este argumento sujeito a alteração acidental que pode afetar os resultados numa parte subsequente da função (apesar de não ter efeitos colaterais por se tratar de uma cópia). Utilizando uma referência constante não existe esse risco, uma vez que o valor referido pela referência não pode ser alterado por força da utilização de const.
+	\item Se o objeto passado como parâmetro ocupar um grande espaço em memória, a passagem por valor implicaria a realização de uma cópia para utilizar dentro da função. Utilizando uma referência constante, o que é passado é apenas uma referência para o objeto original que foi passado como parâmetro; por se tratar de uma referência constante, possui a mesma vantagem da passagem por valor de não provocar efeitos colaterais.
+\end{enumerate}
+\question{Pergunta 10}
+O desempenho de uma implementação de QuickSort depende em grande parte da escolha de pivots. O cálculo da complexidade $O(N\log N)$ assenta no princípio de que o tamanho das duas partições do vetor a ordenar possuem tamanhos dentro da mesma ordem de grandeza. No entanto, se se tratar, por exemplo, de um vetor ordenado de forma crescente sem repetições, o pivot selecionado for sempre o valor de menor índice e se colocar na partição da esquerda os valores menores ou iguais ao pivot, na partição da esquerda é sempre colocado o pivot e na partição da direita os restantes valores. A complexidade de fazer uma partição é $O(N)$, e como na partição da esquerda é sempre só colocado um elemento é necessário particionar o vetor $N$ vezes, o que implica uma complexidade de $O(N\log N)$.
