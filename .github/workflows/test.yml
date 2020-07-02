@@ -189,3 +189,28 @@ jobs:
     - name: test
       run: cd tests/test1/2016/2016_ficheiros/build && ./aeda1617_ci1
 
+  test-2018t2:
+    runs-on: ubuntu-latest
+    needs: submodules
+    steps:
+    - uses: actions/checkout@v2
+    - name: build
+      run: |
+        cd tests/test2/2018/aeda1819_ci2_googleTest
+        mkdir build && cd build
+        cmake .. && make
+    - name: test
+      run: cd tests/test2/2018/aeda1819_ci2_googleTest/build && ./aeda1819_ci2
+
+  test-2017t2:
+    runs-on: ubuntu-latest
+    needs: submodules
+    steps:
+    - uses: actions/checkout@v2
+    - name: build
+      run: |
+        cd tests/test2/2017/aeda1718_ci2
+        mkdir build && cd build
+        g++ -Wall ../Doctor.cpp ../Hospital.cpp ../Test.cpp -o aeda1718_ci2
+    - name: test
+      run: cd tests/test2/2017/aeda1718_ci2/build && ./aeda1718_ci2
