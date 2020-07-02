@@ -1,0 +1,3 @@
+[submodule "tests/test2/2017/aeda1718_ci2/CUTE"]
+	path = tests/test2/2017/aeda1718_ci2/CUTE
+	url = https://github.com/PeterSommerlad/CUTE.git
