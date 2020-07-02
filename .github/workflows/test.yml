@@ -115,3 +115,15 @@ jobs:
         mkdir build && cd build
         cmake .. && make
         ./aeda1920_fp09
+
+  test-tp10:
+    runs-on: ubuntu-latest
+    needs: submodules
+    steps:
+    - uses: actions/checkout@v2
+    - name: test tp10
+      run: |
+        cd tp/tp10/aeda1920_fp10
+        mkdir build && cd build
+        cmake .. && make
+        ./aeda1920_fp10
