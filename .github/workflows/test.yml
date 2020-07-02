@@ -63,4 +63,16 @@ jobs:
         cmake .. && make
         ./aeda1920_fp06
 
+    - name: test tp07
+      run: |
+        cd tp/tp07/aeda1920_fp07
+        mkdir build && cd build
+        cmake .. && make
+        ./aeda1920_fp07
 
+    - name: test tp09
+      run: |
+        cd tp/tp09/aeda1920_fp09
+        mkdir build && cd build
+        cmake .. && make
+        ./aeda1920_fp09
