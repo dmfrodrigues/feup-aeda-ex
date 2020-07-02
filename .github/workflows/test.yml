@@ -187,5 +187,5 @@ jobs:
         mkdir build && cd build
         g++ -Wall ../Mail.cpp ../Postman.cpp ../PostOffice.cpp ../Test.cpp -o aeda1617_ci1
     - name: test
-      run: cd tests/test1/2017/2016_ficheiros/build && ./aeda1617_ci1
+      run: cd tests/test1/2016/2016_ficheiros/build && ./aeda1617_ci1
 
