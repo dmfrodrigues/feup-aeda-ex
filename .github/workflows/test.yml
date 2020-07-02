@@ -25,6 +25,12 @@ jobs:
       run: |
         cd tp/tp01/aeda1920_fp01
         mkdir build && cd build
-        cmake ..
-        make
+        cmake .. && make
         ./aeda1920_fp01
+
+    - name: test tp02
+      run: |
+        cd tp/tp02/aeda1920_fp02
+        mkdir build && cd build
+        cmake .. && make
+        ./aeda1920_fp02
