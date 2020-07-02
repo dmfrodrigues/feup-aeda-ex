@@ -41,3 +41,10 @@ jobs:
         mkdir build && cd build
         cmake .. && make
         ./aeda1920_fp03
+
+      - name: test tp04
+      run: |
+        cd tp/tp04/aeda1920_fp04
+        mkdir build && cd build
+        cmake .. && make
+        ./aeda1920_fp04
