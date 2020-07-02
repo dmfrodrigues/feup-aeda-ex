@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
-#include "Crianca.h"
-#include "Jogo.h"
+#include "crianca.h"
+#include "jogo.h"
 #include <vector>
 #include <string>
 

@@ -5,7 +5,7 @@
 #ifndef JOGO_H_
 #define JOGO_H_
 
-#include "Crianca.h"
+#include "crianca.h"
 #include <list>
 #include <string>
 
