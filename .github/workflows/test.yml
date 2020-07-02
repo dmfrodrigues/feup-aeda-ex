@@ -211,7 +211,7 @@ jobs:
       run: |
         cd tests/test2/2017/aeda1718_ci2
         mkdir build && cd build
-        g++ -Wall ../Doctor.cpp ../Hospital.cpp ../Test.cpp -o aeda1718_ci2
+        g++ -Wall -I../CUTE/cute ../Doctor.cpp ../Hospital.cpp ../Test.cpp -o aeda1718_ci2
     - name: test
       run: cd tests/test2/2017/aeda1718_ci2/build && ./aeda1718_ci2
 
