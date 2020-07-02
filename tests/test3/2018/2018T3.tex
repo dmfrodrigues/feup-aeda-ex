@@ -1,0 +1,8 @@
+\setcounter{chapter}{17}
+\exam{Teste 3 2018}
+\question{Pergunta 8}
+\question{Pergunta 9}
+Em termos de memória, para $N$ palavras de comprimento médio $L$, uma BST ocupa $O(NL)$ espaço, enquanto uma tabela de dispersão ocupa pelo menos $O(NL)$ mais o espaço dos elementos vazios, que deve ser considerável dado que um dos princípios de funcionamento das tabelas de dispersão é os seus elementos serem mapeados para um contentor quase vazio.\\
+Em termos de eficiência temporal, uma BST admite procura da menor palavra maior que $p$ em tempo $O(\log N)$. Assim, para um prefixo $p=p_0 p_1 ... p_n$, queremos encontrar o intervalo de palavras $q$ tal que $p \leq q < p[0:n-1]+(p[n]+1)$. Ou seja, por exemplo, para o prefixo $p=ABCD$ queremos encontrar as palavras $ABCD \leq q < ABCE$.\\
+Estas operações são facilmente garantidas por uma BST. Já numa tabela de dispersão não existe nenhuma vantagem por causa de ordenações, pelo que é necessário percorrer todos os elementos e verificar individualmente se possuem $p$ como prefixo. A não ser que a função de dispersão seja desenhada de forma a agrupar todas as palavras com determinado prefixo de tamanho até determinado $m$ no mesmo "item".
+\question{Pergunta 10}
