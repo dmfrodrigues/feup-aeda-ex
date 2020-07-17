@@ -24,3 +24,5 @@ AEDA-T[0-9]-teor.pdf
 *.lof
 
 .idea
+.vscode
+COMMIT.tex
