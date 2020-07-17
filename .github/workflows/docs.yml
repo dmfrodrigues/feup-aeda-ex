@@ -26,25 +26,25 @@ jobs:
       run: chmod u+x *.sh
 
     - name: Compile test1
-      run: make tests/test1/AEDA-T1-teor.tex
+      run: make tests/test1/AEDA-T1-teor.pdf
     - name: Upload test1
       uses: actions/upload-artifact@v2
       with:
-        name: AEDA-T1-teor.tex
-        path: tests/test1/AEDA-T1-teor.tex
+        name: AEDA-T1-teor.pdf
+        path: tests/test1/AEDA-T1-teor.pdf
 
     - name: Compile test2
-      run: make tests/test2/AEDA-T2-teor.tex
+      run: make tests/test2/AEDA-T2-teor.pdf
     - name: Upload test2
       uses: actions/upload-artifact@v2
       with:
-        name: AEDA-T2-teor.tex
-        path: tests/test2/AEDA-T2-teor.tex
+        name: AEDA-T2-teor.pdf
+        path: tests/test2/AEDA-T2-teor.pdf
 
     - name: Compile test3
-      run: make tests/test3/AEDA-T3-teor.tex
+      run: make tests/test3/AEDA-T3-teor.pdf
     - name: Upload test3
       uses: actions/upload-artifact@v2
       with:
-        name: AEDA-T3-teor.tex
-        path: tests/test3/AEDA-T3-teor.tex
+        name: AEDA-T3-teor.pdf
+        path: tests/test3/AEDA-T3-teor.pdf
