@@ -1,14 +1,21 @@
-name: docs
+name: docs-release
 
 on:
   push:
-    branches: [ master ]
+    tags:
+      - 'v*'
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+
+    - name: Set version
+      run: echo ::set-env name=VERSION::${GITHUB_REF#refs/*/}
+
+    - name: Checkout right version
+      run: git checkout $(git rev-list -n 1 $VERSION)
 
     - name: Install latex
       run: sudo apt install -y latexmk texlive-latex-extra texlive-science texlive-lang-portuguese
@@ -21,12 +28,12 @@ jobs:
         auth_header="$(git config --local --get http.https://github.com/.extraheader)"
         git submodule sync --recursive
         git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --force --recursive --depth=1
-    
+
     - name: Give permission to execute
       run: chmod u+x *.sh
 
     - name: Compile test1
-      run: make tests/test1/AEDA-T1-teor.tex
+      run: make tests/test1/AEDA-T1-teor.tex VERSION=${VERSION:1:100}
     - name: Upload test1
       uses: actions/upload-artifact@v2
       with:
@@ -34,7 +41,7 @@ jobs:
         path: tests/test1/AEDA-T1-teor.tex
 
     - name: Compile test2
-      run: make tests/test2/AEDA-T2-teor.tex
+      run: make tests/test2/AEDA-T2-teor.tex VERSION=${VERSION:1:100}
     - name: Upload test2
       uses: actions/upload-artifact@v2
       with:
@@ -42,7 +49,7 @@ jobs:
         path: tests/test2/AEDA-T2-teor.tex
 
     - name: Compile test3
-      run: make tests/test3/AEDA-T3-teor.tex
+      run: make tests/test3/AEDA-T3-teor.tex VERSION=${VERSION:1:100}
     - name: Upload test3
       uses: actions/upload-artifact@v2
       with:
