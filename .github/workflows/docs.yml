@@ -22,24 +22,24 @@ jobs:
         git submodule sync --recursive
         git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --force --recursive --depth=1
     
-    - name: test1
-      run: cd tests/test1 && latexmk AEDA-T1-teor.tex -pdf
+    - name: Compile test1
+      run: make tests/test1/AEDA-T1-teor.tex
     - name: Upload test1
       uses: actions/upload-artifact@v2
       with:
         name: AEDA-T1-teor.tex
         path: tests/test1/AEDA-T1-teor.tex
 
-    - name: test2
-      run: cd tests/test2 && latexmk AEDA-T2-teor.tex -pdf
+    - name: Compile test2
+      run: make tests/test2/AEDA-T2-teor.tex
     - name: Upload test2
       uses: actions/upload-artifact@v2
       with:
         name: AEDA-T2-teor.tex
         path: tests/test2/AEDA-T2-teor.tex
 
-    - name: test3
-      run: cd tests/test3 && latexmk AEDA-T3-teor.tex -pdf
+    - name: Compile test3
+      run: make tests/test3/AEDA-T3-teor.tex
     - name: Upload test3
       uses: actions/upload-artifact@v2
       with:
