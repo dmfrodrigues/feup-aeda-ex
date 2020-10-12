@@ -4,6 +4,7 @@
 
 ![Test](https://github.com/dmfrodrigues/feup-aeda-ex/workflows/test/badge.svg)
 ![docs](https://github.com/dmfrodrigues/feup-aeda-ex/workflows/docs/badge.svg)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/41eb3e32b03a4b9fa07ae63d5ce09d3e)](https://www.codacy.com/gh/dmfrodrigues/feup-aeda-ex/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=dmfrodrigues/feup-aeda-ex&amp;utm_campaign=Badge_Grade)
 
 - **Institution:** [FEUP](https://sigarra.up.pt/feup/en/web_page.Inicial)
 - **Course:** [AEDA](https://sigarra.up.pt/feup/en/ucurr_geral.ficha_uc_view?pv_ocorrencia_id=436433) (Algorithms and Data Structures)
